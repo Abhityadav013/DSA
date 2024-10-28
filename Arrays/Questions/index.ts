@@ -1,3 +1,5 @@
+import { findMajorityOfElement } from "./find_majority_of_element";
+import { findSubArrayWithLargestSum } from "./find_maximum_subArray_with_largest_sum";
 import { findMissingNumberInArray } from "./find_missing_number_in_array";
 import { findNumberAppearOnce } from "./find_number_appear_once";
 import { leftRotateByOnePlace } from "./left_rotate_by_one_place";
@@ -8,6 +10,7 @@ import { moveZerosToEnd } from "./move_zero_to-end";
 import { rightRotateByOnePlace } from "./right_rotate_by_one_place";
 import { rotateArrayByKPlace } from "./rotate_array_by_kth_place";
 import { secondMaxiumElementInArray } from "./second_maxium_element_in_array";
+import { sortColourOrSortArray } from "./sort_array_or_sort_colours";
 import { sortedArraySearchBinary } from "./sorted_array_search_binary";
 import { sortedArrayLinearSearch } from "./sorted_array_search_linear";
 import { subArraySumEqualsToK } from "./subArray_sum_equla_to_k";
@@ -31,6 +34,9 @@ const S_O_A = 15
 const S_A_S_Q_T_K = [1, 2, 1, 2, 1]
 const S_Q_T_K = 3;
 const elementSearch = 5;
+const S_O_C_O_R_S_A = [2, 0, 2, 1, 1, 0];
+const M_O_I_A = [2, 2, 1, 1, 1, 2, 2];
+const M_S_I_S_A = [-2,1,-3,4,-1,2,1,-5,4];
 export const ArrayQuestions = async () => {
     const maxiumElement = await maxiumElementInArray(M_E_A);
     const secondMaxiumElement = await secondMaxiumElementInArray(S_M_E_A);
@@ -46,12 +52,15 @@ export const ArrayQuestions = async () => {
     const singleNumberInArray = await findNumberAppearOnce(S_N_I_A);
     const longestSubArrWithSumK = await longestSubarrayWithSumK(L_S_W_S_K, S_O_A);
     const subArraySumEqualTok = await subArraySumEqualsToK(S_A_S_Q_T_K, S_Q_T_K);
+    const sortColourOrArray = await sortColourOrSortArray(S_O_C_O_R_S_A)
+    const majorityInArray = await findMajorityOfElement(M_O_I_A)
+    const maxiumSumInSubArray = await findSubArrayWithLargestSum(M_S_I_S_A);
     // console.log(`maxium element in array ${maxiumElement}`)
     // console.log(`second maxium element in array ${secondMaxiumElement}`)
     // console.log(`arry before left rotation --> ${L_R_B_O}`)
     // console.log(`array after left rotated by 1's place -->${leftRotateByOnesPlace} `)
     // console.log(`arry before right rotation --> ${R_R_B_O}`)
-    //console.log(`array after left rotated by 1's place -->${righttRotateByOnesPlace} `)
+    // console.log(`array after left rotated by 1's place -->${righttRotateByOnesPlace} `)
     // console.log(`arry before rotation of kth --> ${R_B_K_P}`)
     // console.log(`array after left rotated by kth place -->${rotateByKPosition} `)
     // console.log(`arry before moving zero to end --> ${M_Z_T_E}`)
@@ -59,10 +68,13 @@ export const ArrayQuestions = async () => {
     // console.log(`element to search in array using linear search ${linearSearchInSoretedArray}`)
     // console.log(`element to search in array using binart search ${binarySearchInSortedArray}`)
     // console.log(`union of two array --> ${unionOfTwoArray}`)
-    //console.log(`missing number from array is --> ${missingNumber}`)
+    // console.log(`missing number from array is --> ${missingNumber}`)
     // console.log(`maximum count of consecutive 1's is --> ${maxCountOfConsecutiveOne}`)
     // console.log(`missing number of array is --> ${singleNumberInArray}`)
-   // console.log(`longes subArray of sum k  --> ${longestSubArrWithSumK}`)
-    console.log(`sub array sum equal to k  --> ${subArraySumEqualTok}`)
+    // console.log(`longes subArray of sum k  --> ${longestSubArrWithSumK}`)
+    // sortColourOrArray console.log(`sub array sum equal to k  --> ${subArraySumEqualTok}`)
+    // console.log(`sorted colour or sorted array 0,1,2 --> ${sortColourOrArray}`)
+    // console.log(`The Majority of element in array would be --> ${majorityInArray}`)
+     console.log(`Maxium Sum in the SubArray will be  --> ${maxiumSumInSubArray}`)
 
 }
